@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        background-color: rgb(44, 51, 51);
+        color: rgb(244, 239, 233);
+      }
+
+      /* * {
+          background-color: rgb(53, 136, 136);
+          color: antiquewhite;
+        }
+        */
+    </style>
+
+    <title>Juego</title>
+  </head>
+  <body>
+    <h1>Programa que calcula que años hubo mundial de la FIFA</h1>
+
+    <script>
+      function saltarLinea() {
+        document.write('<br>');
+        document.write('<br>');
+      }
+
+      function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+      }
+
+      let anoMundial = 1986;
+      let limite = parseInt(prompt('Año desado para calcular'));
+
+      alert('Hubo mundial de la FIFA en el año ' + anoMundial);
+
+      while (anoMundial <= limite) {
+        imprimir('Hubo mundial de la FIFA en el año ' + anoMundial);
+        anoMundial = anoMundial + 4;
+      }
+      imprimir(' Fin');
+
+      anoMundial = anoMundial + 4;
+
+      alert('Hubo mundial de la FIFA en el año ' + anoMundial);
+
+      Math.round(Math.random() * 10);
+    </script>
+  </body>
+</html>

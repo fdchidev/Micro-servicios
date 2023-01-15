@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        background-color: rgb(44, 51, 51);
+        color: rgb(244, 239, 233);
+      }
+
+      /* * {
+        background-color: rgb(53, 136, 136);
+        color: antiquewhite;
+      }
+      */
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Programa para calcular los puntos de un equipo de Futbol</h1>
+  </body>
+  <script>
+    function saltarLinea() {
+      document.write('<br>');
+      document.write('<br>');
+    }
+
+    function imprimir(frase) {
+      document.write(frase);
+      saltarLinea();
+    }
+
+    let victorias = parseInt(prompt('¿Número de victorias?'));
+    let empates = parseInt(prompt('¿Número de empates?'));
+
+    let puntosTotal = victorias * 3 + empates;
+
+    imprimir('El total de puntos del equipo es: ' + puntosTotal);
+  </script>
+
+  <script>
+    /*
+    // Ejercicio †otal de invitados    
+
+    var invitados = parseInt(prompt('Número de invitados'));
+    var vips = parseInt(prompt("Número de invitados VIP's"));
+
+    var total = invitados + vips;
+
+    imprimir('El total de invitados es ' + total);
+    */
+  </script>
+</html>

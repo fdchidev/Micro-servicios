@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de índice de masa corporal</title>
+  </head>
+  <body>
+    <h1>Calculadora de índice de masa corporal</h1>
+
+    <h2>Calcualadora individual de IMC</h2>
+
+    <script>
+      function saltarLinea() {
+        document.write('<br>');
+        //document.write('<br>');//
+      }
+      function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+      }
+
+      function calcularImc(peso, altura, nombre) {
+        imc = peso / (altura * altura);
+
+        imprimir('El IMC de ' + nombre + ' es:  ' + imc);
+        saltarLinea();
+      }
+
+      calcularImc(52, 1.5, 'Elena');
+      calcularImc(73, 1.7, 'Fer');
+      calcularImc(27, 1.3, 'Regina');
+    </script>
+
+    <h2>Promedio de IMC entre dos personas</h2>
+
+    <script>
+      function saltarLinea() {
+        document.write('<br>');
+        document.write('<br>');
+      }
+
+      function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+      }
+
+      function calcularImc(peso1, altura1, nombre1, peso2, altura2, nombre2) {
+        imc1 = peso1 / (altura1 * altura1);
+        imc2 = peso2 / (altura2 * altura2);
+
+        imprimir(
+          'El promedio del IMC calculado de ' +
+            nombre1 +
+            'y ' +
+            nombre2 +
+            ' es:  ' +
+            (imc1 + imc2) / 2
+        );
+      }
+
+      calcularImc(70, 1.7, 'Fernando', 27, 1.3, 'Regina');
+
+      calcularImc(40, 1.5, 'Alicia', 60, 1.85, 'Ana');
+    </script>
+
+    <h2>Promedio de IMC entre dos personas (versión 2.0)</h2>
+
+    <script>
+      //Codigo re ordenado para mejorar mantenimiento
+
+      function calcularImc(peso, altura) {
+        return peso / (altura * altura);
+      }
+      nombre = prompt('Favor de ingresar nombre');
+      pesoUsuario = prompt(nombre + ' indica tu peso');
+
+      alturaUsuario = prompt(nombre + ', por favor ingresa tu altura');
+
+      imcCalculado = calcularImc(pesoUsuario, alturaUsuario);
+
+      imprimir(nombre + ', tu IMC  es: ' + imcCalculado);
+    </script>
+  </body>
+</html>

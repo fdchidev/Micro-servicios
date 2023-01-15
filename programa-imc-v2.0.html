@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        background-color: rgb(44, 51, 51);
+        color: rgb(244, 239, 233);
+      }
+
+      /* * {
+          background-color: rgb(53, 136, 136);
+          color: antiquewhite;
+        }
+        */
+    </style>
+
+    <title>Calculadora de índice de masa corporal</title>
+  </head>
+  <body>
+    <h1>Promedio de IMC entre dos personas (versión mantenimiento)</h1>
+
+    <script>
+      //Codigo re ordenado para mejorar mantenimiento
+
+      function saltarLinea() {
+        document.write('<br>');
+        document.write('<br>');
+      }
+
+      function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+      }
+
+      function calcularImc(peso, altura) {
+        return peso / (altura * altura);
+      }
+      nombre = prompt('Favor de ingresar nombre');
+      pesoUsuario = prompt(nombre + ' indica tu peso');
+
+      alturaUsuario = prompt(nombre + ', por favor ingresa tu altura');
+
+      imcCalculado = calcularImc(pesoUsuario, alturaUsuario);
+
+      imprimir(nombre + ', tu IMC  es: ' + imcCalculado);
+
+      if (imcCalculado < 18.5) {
+        imprimir('IMC por debajo de lo recomendado');
+      }
+
+      if (imcCalculado >= 18.5) {
+        if (imcCalculado < 25) imprimir('IMC dentro de Normal y Saludable');
+      }
+
+      if (imcCalculado >= 25) {
+        if (imcCalculado < 30) imprimir('IMC Obesidad o Sobrepeso');
+      }
+
+      if (imcCalculado >= 30) {
+        imprimir('IMC considerado como obesidad');
+      }
+    </script>
+  </body>
+</html>

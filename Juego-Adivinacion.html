@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        background-color: rgb(44, 51, 51);
+        color: rgb(244, 239, 233);
+      }
+
+      /* * {
+          background-color: rgb(53, 136, 136);
+          color: antiquewhite;
+        }
+        */
+    </style>
+
+    <title>Juego</title>
+  </head>
+  <body>
+    <h1>Juego de adivinación</h1>
+
+    <script>
+      //Codigo re ordenado para mejorar mantenimiento
+
+      function saltarLinea() {
+        document.write('<br>');
+        document.write('<br>');
+      }
+
+      function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+      }
+
+      let numeroPensado = Math.round(Math.random() * 10);
+
+      let numeroLanzado = parseInt(prompt('Ingrese un número entre 0 y 10'));
+
+      if (numeroPensado == numeroLanzado) {
+        imprimir('¡¡¡Felicidades, Acertaste!!!');
+      } else {
+        imprimir('Lo sentimos, fallaste,   :( El numero era: ' + numeroPensado);
+      }
+    </script>
+  </body>
+</html>
